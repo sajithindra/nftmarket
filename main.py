@@ -8,6 +8,15 @@ from mongo import check_username
 from mongo import artist_login,buyer_login,gallery_login
 app = FastAPI()
 
+################### ROOT ################################
+
+@app.get('/')
+async def root():
+    return {'000': 'It works'}
+
+
+####################### END #############################
+
 #################### LOGIN ##############################
 
 @app.get('/artistlogin')
